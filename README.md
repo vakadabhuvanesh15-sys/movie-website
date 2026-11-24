@@ -1,3 +1,6 @@
+V.BHUVANESH VENKATA SAI MANIKANTA 
+N26V01A0416
+SECTION-5
 # CineView — Inception Movie Page
 
 A responsive one-page movie information website for the film *Inception*. It is built using only HTML5 and CSS3.
