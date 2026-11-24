@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup and external font connections -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive movie information page for Inception">
+    <title>Inception | Movie Information</title>
+
+    <!-- Google Fonts gives the page heading and body fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- The only stylesheet used by this project -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar: a sticky header with the site name and section links -->
+    <header class="navbar">
+        <nav class="nav-container" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="CineView home">CINE<span>VIEW</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#cast">Cast</a></li>
+                <li><a href="#trailer">Trailer</a></li>
+                <li><a href="#related">Related</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero: the main movie poster, details and trailer button -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <img class="movie-poster" src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg" alt="Inception movie poster featuring Leonardo DiCaprio">
+
+                <div class="movie-details">
+                    <p class="eyebrow">A Christopher Nolan Film</p>
+                    <h1>Inception</h1>
+                    <div class="meta-row">
+                        <span>Science Fiction</span>
+                        <span>2010</span>
+                        <span>2h 28m</span>
+                    </div>
+                    <div class="hero-rating" aria-label="Rated 8.8 out of 10">
+                        <span class="star">★</span>
+                        <strong>8.8</strong>
+                        <span>/ 10</span>
+                    </div>
+                    <a class="primary-button" href="#trailer">Watch Trailer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story: synopsis and a compact information box -->
+        <section class="story section" id="story">
+            <h2 class="section-title">Story</h2>
+            <div class="story-layout">
+                <div class="synopsis">
+                    <p>Dom Cobb is a skilled thief who steals secrets from dreams. His unusual talent has made him famous in the criminal world, but it has also cost him the life he once knew.</p>
+                    <p>For one final mission, Cobb must plant an idea in a target's mind instead of stealing one. The dangerous team he gathers soon discovers that dreams do not always follow their own rules.</p>
+                </div>
+
+                <aside class="info-box" aria-label="Movie information">
+                    <dl>
+                        <div><dt>Director</dt><dd>Christopher Nolan</dd></div>
+                        <div><dt>Writer</dt><dd>Christopher Nolan</dd></div>
+                        <div><dt>Language</dt><dd>English</dd></div>
+                        <div><dt>Release</dt><dd>16 July 2010</dd></div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Cast: six cards containing a photo and character details -->
+        <section class="cast section" id="cast">
+            <h2 class="section-title">Cast</h2>
+            <div class="cast-list">
+                <article class="cast-card">
+                    <img src="https://placehold.co/300x420/1a1a22/e8b44f?text=Leonardo" alt="Portrait placeholder of Leonardo DiCaprio">
+                    <h3>Leonardo DiCaprio</h3>
+                    <p>Dom Cobb</p>
+                </article>
+
+                <article class="cast-card">
+                    <img src="https://placehold.co/300x420/1a1a22/e8b44f?text=Joseph" alt="Portrait placeholder of Joseph Gordon-Levitt">
+                    <h3>Joseph Gordon-Levitt</h3>
+                    <p>Arthur</p>
+                </article>
+
+                <article class="cast-card">
+                    <img src="https://placehold.co/300x420/1a1a22/e8b44f?text=Elliot" alt="Portrait placeholder of Elliot Page">
+                    <h3>Elliot Page</h3>
+                    <p>Ariadne</p>
+                </article>
+
+                <article class="cast-card">
+                    <img src="https://placehold.co/300x420/1a1a22/e8b44f?text=Tom" alt="Portrait placeholder of Tom Hardy">
+                    <h3>Tom Hardy</h3>
+                    <p>Eames</p>
+                </article>
+
+                <article class="cast-card">
+                    <img src="https://placehold.co/300x420/1a1a22/e8b44f?text=Ken" alt="Portrait placeholder of Ken Watanabe">
+                    <h3>Ken Watanabe</h3>
+                    <p>Saito</p>
+                </article>
+
+                <article class="cast-card">
+                    <img src="https://placehold.co/300x420/1a1a22/e8b44f?text=Marion" alt="Portrait placeholder of Marion Cotillard">
+                    <h3>Marion Cotillard</h3>
+                    <p>Mal Cobb</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ratings: three different scores built with text and symbols -->
+        <section class="ratings section" id="ratings">
+            <h2 class="section-title">Ratings</h2>
+            <div class="rating-list">
+                <article class="score-card">
+                    <h3>IMDb</h3>
+                    <p class="score">8.8</p>
+                    <div class="stars" aria-label="Four and one half stars">★★★★☆</div>
+                    <p class="score-label">User Rating</p>
+                </article>
+
+                <article class="score-card">
+                    <h3>Audience</h3>
+                    <p class="score">91%</p>
+                    <div class="stars" aria-label="Four and one half stars">★★★★☆</div>
+                    <p class="score-label">Audience Score</p>
+                </article>
+
+                <article class="score-card">
+                    <h3>Critics</h3>
+                    <p class="score">87%</p>
+                    <div class="stars" aria-label="Four and one half stars">★★★★☆</div>
+                    <p class="score-label">Critics Score</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Trailer: a YouTube iframe inside a 16:9 responsive wrapper -->
+        <section class="trailer section" id="trailer">
+            <h2 class="section-title">Official Trailer</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception official trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Related: four additional movie poster cards -->
+        <section class="related section" id="related">
+            <h2 class="section-title">Related Movies</h2>
+            <div class="related-list">
+                <article class="related-card">
+                    <img src="https://image.tmdb.org/t/p/w342/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg" alt="Interstellar movie poster">
+                    <h3>Interstellar</h3>
+                    <p>2014 <span>★ 8.7</span></p>
+                </article>
+
+                <article class="related-card">
+                    <img src="https://image.tmdb.org/t/p/w342/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight movie poster">
+                    <h3>The Dark Knight</h3>
+                    <p>2008 <span>★ 9.0</span></p>
+                </article>
+
+                <article class="related-card">
+                    <img src="https://image.tmdb.org/t/p/w342/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Dune movie poster">
+                    <h3>Dune</h3>
+                    <p>2021 <span>★ 8.0</span></p>
+                </article>
+
+                <article class="related-card">
+                    <img src="https://image.tmdb.org/t/p/w342/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg" alt="The Matrix movie poster">
+                    <h3>The Matrix</h3>
+                    <p>1999 <span>★ 8.7</span></p>
+                </article>
+
+                <article class="related-card">
+                    <img src="https://placehold.co/342x513/1a1a22/e8b44f?text=Tenet" alt="Tenet movie poster">
+                    <h3>Tenet</h3>
+                    <p>2020 <span>★ 7.3</span></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: copyright, quick links and text social links -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 CineView. College Project.</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#home">Home</a>
+                <a href="#story">Story</a>
+                <a href="#cast">Cast</a>
+                <a href="#trailer">Trailer</a>
+            </nav>
+            <div class="social-links">
+                <a href="#" aria-label="CineView on Facebook">Facebook</a>
+                <a href="#" aria-label="CineView on Instagram">Instagram</a>
+                <a href="#" aria-label="CineView on X">X</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

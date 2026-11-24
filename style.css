@@ -1,0 +1,522 @@
+/* Reset: remove default browser spacing and use a predictable box model */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #0b0b0f;
+    color: #f5f5f5;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Variables: simple reusable values for the page colors */
+:root {
+    --accent: #e8b44f;
+    --dark: #0b0b0f;
+    --card: #16161d;
+    --text: #f5f5f5;
+    --muted: #aaaab4;
+}
+
+/* Navbar: flexbox keeps the brand and links on opposite sides */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(11, 11, 15, 0.95);
+    border-bottom: 1px solid #292932;
+}
+
+.nav-container {
+    min-height: 72px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: var(--text);
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.brand span {
+    color: var(--accent);
+}
+
+.nav-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a,
+.footer-links a,
+.social-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.footer-links a:hover,
+.social-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero: the image and details sit in one flexible row */
+.hero {
+    min-height: 560px;
+    padding: 50px 24px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(11, 11, 15, 0.25), rgba(11, 11, 15, 0.95));
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.movie-poster {
+    width: 340px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+.movie-details {
+    max-width: 520px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.movie-details h1 {
+    margin: 0;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 76px;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.meta-row {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.meta-row span {
+    padding: 6px 12px;
+    background-color: var(--card);
+    border: 1px solid #34343f;
+    border-radius: 20px;
+}
+
+.hero-rating {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-rating .star,
+.related-card span,
+.stars {
+    color: var(--accent);
+}
+
+.hero-rating strong {
+    font-size: 32px;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background-color: var(--accent);
+    color: #17120a;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background-color: #ffd477;
+    transform: translateY(-2px);
+}
+
+/* Shared section style: consistent maximum width and spacing */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 24px;
+    scroll-margin-top: 72px;
+}
+
+.section-title {
+    margin: 0 0 30px;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+/* Story: text and information box share a flexible row */
+.story-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.synopsis {
+    flex: 2;
+}
+
+.synopsis p {
+    margin: 0 0 16px;
+    color: #dddddf;
+    font-size: 17px;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 260px;
+    padding: 20px;
+    background-color: var(--card);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+}
+
+.info-box dl,
+.info-box dd {
+    margin: 0;
+}
+
+.info-box dl div {
+    padding: 10px 0;
+    border-bottom: 1px solid #30303a;
+}
+
+.info-box dl div:last-child {
+    border-bottom: 0;
+}
+
+.info-box dt {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Cast: flex-wrap creates a row that moves cards to a new line */
+.cast-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cast-card {
+    width: calc((100% - 100px) / 6);
+    min-width: 155px;
+    padding: 12px;
+    text-align: center;
+    background-color: var(--card);
+    border-radius: 8px;
+}
+
+.cast-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.cast-card h3 {
+    margin: 12px 0 2px;
+    font-size: 15px;
+}
+
+.cast-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Ratings: three equal cards arranged with flexbox */
+.rating-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.score-card {
+    width: calc((100% - 40px) / 3);
+    min-width: 220px;
+    padding: 28px 16px;
+    text-align: center;
+    background-color: var(--card);
+    border-radius: 8px;
+}
+
+.score-card h3 {
+    margin: 0;
+    color: var(--muted);
+}
+
+.score {
+    margin: 8px 0;
+    color: var(--accent);
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stars {
+    letter-spacing: 4px;
+}
+
+.score-label {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Trailer: the padding percentage creates a 16:9 aspect ratio */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Related: cards wrap and use a simple hover transform */
+.related-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.related-card {
+    width: calc((100% - 80px) / 5);
+    min-width: 180px;
+    background-color: var(--card);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.related-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.related-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.related-card h3 {
+    margin: 12px 12px 4px;
+    font-size: 16px;
+}
+
+.related-card p {
+    margin: 0 12px 14px;
+    color: var(--muted);
+}
+
+.related-card span {
+    float: right;
+}
+
+/* Footer: flexbox groups the copyright, links and social links */
+.footer {
+    padding: 30px 24px;
+    background-color: #070709;
+    border-top: 1px solid #292932;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.footer-links,
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+/* Tablet: reduce sizes and allow navigation and content to wrap */
+@media (max-width: 768px) {
+    .nav-container {
+        min-height: 64px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .nav-links {
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .section {
+        scroll-margin-top: 82px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .movie-poster {
+        width: 300px;
+        height: 420px;
+    }
+
+    .movie-details h1 {
+        font-size: 60px;
+    }
+
+    .meta-row,
+    .hero-rating {
+        justify-content: center;
+    }
+
+    .story-layout {
+        flex-direction: column;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    .cast-card {
+        width: calc((100% - 40px) / 3);
+    }
+
+    .related-card {
+        width: calc((100% - 40px) / 3);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile: keep all fixed-width items within the 375px screen */
+@media (max-width: 375px) {
+    .nav-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 4px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 34px 16px;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .movie-poster {
+        width: 260px;
+        height: 370px;
+    }
+
+    .movie-details h1 {
+        font-size: 48px;
+    }
+
+    .section {
+        padding: 50px 16px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .cast-card,
+    .score-card,
+    .related-card {
+        width: 100%;
+    }
+
+    .cast-card img {
+        height: 300px;
+    }
+
+    .related-card img {
+        height: 420px;
+    }
+
+    .footer-links,
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
